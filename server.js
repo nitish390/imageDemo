@@ -6,7 +6,7 @@ var jsonparser = require('json-parser');
 var mongoose = require('mongoose');
 
 var config = require('./config/config')
-var routes = require('./routes/routes')
+var routes = require('./routes/searchandsave')
 
 mongoose.connect(config.mongdburl, { useMongoClient: true });
 
