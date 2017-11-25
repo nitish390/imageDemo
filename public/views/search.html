@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="row">
+            <div class="col-sm-6 col-sm-offset-3">
+                    <form name="myform"  ng-submit="myform.$valid && submitForm()" novalidate>
+                            <div class="form-group">
+                                    <label for="keyword">Search</label>
+              <input id="keyword" name="keyword" class="form-control" ng-model="body.keyword" required><br>
+              <span ng-messages="myform.keyword.$error" ng-show="myform.$submitted ||myform.keyword.$touched">  
+                    <span class=" text-danger" ng-message="required">Field is required</span>
+                     </span>
+              </div>
+              <button  type="submit" class="btn btn-primary">Submit</button>
+              </form>
+            </div>
+            <pre>
+                {{myform.keyword|json}}
+            </pre>
+    </div>
+</div>
